@@ -5,6 +5,8 @@ metadata:
 spec:
   package: xpkg.upbound.io/upbound/provider-helm:v0.20.0
 
+---
+
 apiVersion: helm.crossplane.io/v1beta1
 kind: ProviderConfig
 metadata:
