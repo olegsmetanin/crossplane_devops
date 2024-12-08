@@ -1,0 +1,18 @@
+apiVersion: pkg.crossplane.io/v1
+kind: Provider
+metadata:
+  name: provider.helm.crossplane.example.com
+spec:
+  package: xpkg.upbound.io/upbound/provider-helm:v0.20.0
+
+apiVersion: helm.crossplane.io/v1beta1
+kind: ProviderConfig
+metadata:
+  name: providerconfig.helm.crossplane.example.com
+spec:
+  credentials:
+    secretRef:
+      key: kubeconfig
+      name: cluster-config
+      namespace: crossplane-system
+    source: Secret
