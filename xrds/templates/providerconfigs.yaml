@@ -1,0 +1,10 @@
+apiVersion: helm.crossplane.io/v1beta1
+kind: ProviderConfig
+metadata:
+  name: providerconfig-helm-crossplane
+  credentials:
+    secretRef:
+      key: kubeconfig
+      name: cluster-config
+      namespace: crossplane-system
+    source: Secret
