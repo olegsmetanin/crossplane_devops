@@ -6,7 +6,7 @@ spec:
   forProvider:
     chart:
       name: nginx
-      repository: oci://registry-1.docker.io/bitnamicharts
+      repository: oci://registry-1.docker.io/bitnamicharts/nginx
       version: 18.2.6
     namespace: nginx
     values:
