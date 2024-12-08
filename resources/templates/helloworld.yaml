@@ -1,0 +1,16 @@
+apiVersion: helm.crossplane.io/v1beta1
+kind: Release
+metadata:
+  name: nginx
+spec:
+  forProvider:
+    chart:
+      name: nginx
+      repository: https://charts.bitnami.com/bitnami
+      version: 18.2.6
+    namespace: nginx
+    values:
+      service:
+        type: ClusterIP
+  providerConfigRef:
+    name: providerconfig-helm-crossplane
